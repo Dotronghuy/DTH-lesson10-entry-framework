@@ -1,0 +1,75 @@
+﻿@model IEnumerable<lesson10_entry_framework_DTH.Models.SinhVien>
+
+@{
+    ViewBag.Title = "DTHIndex";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "DTHCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HoSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoiSinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HocBong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DTB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Khoa.TenKH)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoiSinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HocBong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DTB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Khoa.TenKH)
+        </td>
+        <td>
+            @Html.ActionLink("DTHEdit", "DTHEdit", new { id=item.MaSV.Trim() }) |
+            @Html.ActionLink("DTHDetails", "DTHDetails", new { id=item.MaSV.Trim() }) |
+            @Html.ActionLink("DTHDelete", "DTHDelete", new { id=item.MaSV.Trim() })
+        </td>
+    </tr>
+}
+
+</table>

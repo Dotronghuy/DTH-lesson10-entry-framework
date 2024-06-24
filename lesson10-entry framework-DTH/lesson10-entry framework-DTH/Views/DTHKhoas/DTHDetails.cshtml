@@ -1,0 +1,26 @@
+﻿@model lesson10_entry_framework_DTH.Models.Khoa
+
+@{
+    ViewBag.Title = "DTHDetails";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Khoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKH)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("DTHEdit", "DTHEdit", new { id = Model.MaKH }) |
+    @Html.ActionLink("Back to List", "DTHIndex")
+</p>

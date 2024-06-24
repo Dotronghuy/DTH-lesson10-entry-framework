@@ -1,0 +1,82 @@
+﻿@model lesson10_entry_framework_DTH.Models.SinhVien
+
+@{
+    ViewBag.Title = "DTHDetails";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SinhVien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HoSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoiSinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoiSinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HocBong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HocBong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DTB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Khoa.TenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Khoa.TenKH)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("DTHEdit", "DTHEdit", new { id = Model.MaSV }) |
+    @Html.ActionLink("Back to List", "DTHIndex")
+</p>

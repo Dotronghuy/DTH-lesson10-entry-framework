@@ -1,0 +1,39 @@
+﻿@model IEnumerable<lesson10_entry_framework_DTH.Models.Monhoc>
+
+@{
+    ViewBag.Title = "DTHIndex";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "DTHCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenMH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sotiet)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenMH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sotiet)
+        </td>
+        <td>
+            @Html.ActionLink("DTHEdit", "DTHEdit", new { id=item.MaMH.Trim() }) |
+            @Html.ActionLink("DTHDetails", "DTHDetails", new { id=item.MaMH.Trim() }) |
+            @Html.ActionLink("DTHDelete", "DTHDelete", new { id=item.MaMH.Trim() })
+        </td>
+    </tr>
+}
+
+</table>

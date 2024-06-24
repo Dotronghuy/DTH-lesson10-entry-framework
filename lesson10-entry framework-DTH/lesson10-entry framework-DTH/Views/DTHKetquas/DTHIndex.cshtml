@@ -1,0 +1,46 @@
+﻿@model IEnumerable<lesson10_entry_framework_DTH.Models.Ketqua>
+
+@{
+    ViewBag.Title = "DTHIndex";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "DTHCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SinhVien.HoSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Monhoc.TenMH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Diem)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SinhVien.HoSV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Monhoc.TenMH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diem)
+            </td>
+            <td>
+                @Html.ActionLink("DTHEdit", "DTHEdit", new { MaSV = item.MaSV.Trim(), MaMH = item.MaMH.Trim() }) |
+                @Html.ActionLink("DTHDetails", "DTHDetails", new { MaSV = item.MaSV.Trim(), MaMH = item.MaMH.Trim() }) |
+                @Html.ActionLink("DTHDelete", "DTHDelete", new { MaSV = item.MaSV.Trim(), MaMH = item.MaMH.Trim() })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,42 @@
+﻿@model lesson10_entry_framework_DTH.Models.Ketqua
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ketqua</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Diem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Monhoc.TenMH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Monhoc.TenMH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SinhVien.HoSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SinhVien.HoSV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("DTHEdit", "DTHEdit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "DTHIndex")
+</p>
